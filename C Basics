@@ -1,0 +1,89 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    // Printf command + some variable variations
+    int badNum = 40;
+    double favNum = 40.1337;
+    char favLetter = 'F';
+
+    printf ("Hello\nWorld!\n");
+    printf ("\"Hilarious\" he said.\n");
+    printf ("I don't like the %s %d\n", "number", 500);
+    printf ("\n");
+    printf ("My favorite %s is %f\n", "number", favNum);
+    printf ("I also like the %s %d\n", "number", badNum);
+    printf ("My favorite letter is %c\n", favLetter);
+    printf ("\n");
+
+    // Math done with 2 integers returns an integer
+    printf ("%d\n", 5 * 4);
+    // Math done with 1 int & 1 float always returns a float
+    printf ("%d\n", 5 * 4.0);
+    // Math done with 2 floats returns a float
+    printf ("%f\n", 5.0 * 4.0);
+    // Argument returns 0/null if wrong arithmetic expression
+    printf ("\n");
+    printf ("%%f = float/double\n");
+    printf ("%%d = integer\n");
+    printf ("\n");
+
+    // MATH FUNCTIONS
+
+    // pow = to the power of (i.e. below it's 4 cubed, which equals 64)
+    printf ("%f\n", pow(4, 3));
+    // sqrt = square root of...
+    printf ("%f\n", sqrt(36));
+    // ceil = ceiling of... (i.e. it rounds up to nearest whole number which equals 37)
+    printf ("%f\n", ceil(36.356));
+    // floor = floor of... (i.e. rounds down, no matter how high decimals)
+    printf ("%f\n", floor(36.789));
+    // abs = absolute no. of... (i.e. returns the absolute number, 12)
+    printf ("%d\n", abs(-12));
+    printf ("\n");
+
+    // CONSTANT VARIABLES
+
+    const int NUM = 5;
+    printf ("%d\n", NUM);
+    // Can't modify a constant, such as below, will return error
+    // numb = 8;
+    printf ("%d\n", NUM);
+
+    // USER INPUT
+
+    int age;
+
+    printf ("Enter your age: ");
+    scanf ("%d", &age);
+    printf ("You are %d years old", age);
+    printf ("\n");
+
+    double americanGPA;
+
+    printf ("Enter your GPA: ");
+    scanf ("%lf", &americanGPA);
+    printf ("Your GPA is %f", americanGPA);
+    printf ("\n");
+
+    char grade;
+
+    printf ("Enter your grade: ");
+    // NEED SPACE BEFORE %C
+    scanf (" %c", &grade);
+    printf ("Your grade is %c", grade);
+    printf ("\n");
+
+
+    char name[20];
+
+    printf ("Enter your name: ");
+    // fgets can store a whole line's text, without being cutoff by special characters (i.e. space)
+    fgets (name, 20, stdin);
+    printf ("Your name is %s", name);
+    printf ("\n");
+
+
+    return 0;
+}
