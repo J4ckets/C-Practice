@@ -87,3 +87,42 @@ int main()
 
     return 0;
 }
+
+
+// SWITCH/CASE EXAMPLE
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+
+    char grade;
+
+    printf  ("Please input grade received in test: ");
+    scanf   ("%c", &grade);
+
+    switch (grade)
+    {
+    case 'A':
+        printf  ("You did great!\n");
+        break;
+    case 'B':
+        printf  ("You did good!\n");
+        break;
+    case 'C':
+        printf  ("You did alright!\n");
+        break;
+    case 'D':
+        printf  ("You did poorly...\n");
+        break;
+    case 'E':
+        printf  ("You failed...\n");
+        break;
+    default:
+        printf  ("Invalid Grade, Please Restart\n");
+    }
+
+    return 0;
+    
+}
