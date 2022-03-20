@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+
+    int age = 30;
+    int *pAge = &age;
+    double gpa = 3.4;
+    double *pGpa = &gpa;
+    char grade = 'A';
+    char *pGrade = &grade;
+
+
+    // Printing the memory address of age, i.e. where the variable age is stored in RAM
+    // '&' modifies variable and turns it into that variable's memory address
+    printf("Age Memory Address: %p\n", &age);
+    printf("GPA Memory Address: %p\n", &gpa);
+    printf("Grade Memory Address: %p\n", &grade);
+
+    printf("\n");
+    // Here, I use the pointer variable, created above, in place of modifying the age variable with a '&'
+    printf("Age Memory Address, using pointer variable: %p\n", pAge);
+    printf("\n");
+    // Below, I dereference the 'pAge' pointer variable, acquiring the integer located at the 'pAge' variable's memory address, rather than the address itself
+    printf("Dereferenced Age Memory Address: %d\n", *pAge);
+
+    return 0;
+}
