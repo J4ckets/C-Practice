@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+
+    // 2D ARRAY
+    // Three elements in array, Two elements in each array within the encompassing array
+    int nums[3][2] = {{1,2}, {3,4}, {5,6}};
+    //printf("%d\n", nums[0][1]);
+    //printf("%d\n", nums[2][0]);
+
+    // Declaring two variables at once
+    int i, j;
+
+    // Printing out all elements of 2D array: 1st For-Loop will execute 3 times, each time, executing the 2nd For-Loop twice, printing each element in each array.
+    for(i = 0; i < 3; i++)
+    {
+        for(j = 0; j < 2; j++)
+        {
+            printf("%d, ", nums[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
