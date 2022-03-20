@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+
+    int index = 1;
+    
+    //While Loop
+    while(index <= 20)
+    {
+        printf("%d\n", index);
+        index++;
+    }
+
+    //Do While Loop does code before doing the while loop
+    do
+    {
+        printf("%d\n", index);
+        index++;
+    }
+    while(index <= 20);
+
+    return 0;
+}
