@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+
+    // WRITING FILE
+    // Basic File Modes: r = read, w = write, a = append...
+    char line[255];
+    FILE * fPointer = fopen("employees.txt", "r");
+
+    //fprintf(fPointer, "Jim, Sales Consultant\n");
+    //fprintf(fPointer, "Dwight, Assistant to the Regional Manager\n");
+    //fprintf(fPointer, "Pam, Receptionist\n");
+
+    // APPENDING FILE
+    //fprintf(fPointer, "\nToby, Human Resources");
+
+    // READING FILE
+    fgets(line, 255, fPointer); // Gets first line of file
+    fgets(line, 255, fPointer); // In combination with above fgets, will now get second line of file
+    printf("%s", line); // Prints acquired line of file
+
+    fclose(fPointer);
+
+    return 0;
+}
